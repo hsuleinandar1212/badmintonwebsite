@@ -46,7 +46,7 @@
             <p>
                 <i class="fa-solid fa-envelope" style="color: var(--accent-yellow);"></i>
 
-                mtubadminton@gmail.com
+                mtechnologyuniversity@gmail.com
             </p>
 
             <div class="social">

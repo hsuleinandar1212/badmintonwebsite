@@ -290,7 +290,7 @@ class SMTP
             return;
         }
         //Is this a PSR-3 logger?
-        if ($this->Debugoutput instanceof \Psr\Log\LoggerInterface) {
+        if (is_object($this->Debugoutput) && is_a($this->Debugoutput, 'Psr\\Log\\LoggerInterface')) {
             //Remove trailing line breaks potentially added by calls to SMTP::client_send()
             $this->Debugoutput->debug(rtrim($str, "\r\n"));
 
