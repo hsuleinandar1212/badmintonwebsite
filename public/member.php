@@ -1,19 +1,37 @@
 <?php
 
-session_start();
+/**
+ * =========================================================
+ * MTU BADMINTON CLUB
+ * PROTECTED MEMBERS PAGE
+ * =========================================================
+ */
 
+require_once __DIR__ . "/../includes/auth.php";
+
+/**
+ * Only authenticated members can view this page.
+ */
+require_member();
+
+/**
+ * Database connection.
+ */
 require_once __DIR__ . "/../config/db.php";
+
+/**
+ * Website header.
+ */
 require_once __DIR__ . "/../includes/header.php";
 
-/*
-|--------------------------------------------------------------------------
-| PAGE TITLE
-|--------------------------------------------------------------------------
-*/
+
+/**
+ * =========================================================
+ * PAGE TITLE
+ * =========================================================
+ */
 
 $pageTitle = "MTU Badminton Club | Members";
-
-
 /*
 |--------------------------------------------------------------------------
 | GET APPROVED MEMBERS
